@@ -1,0 +1,235 @@
+@import url(https://fonts.googleapis.com/css2?family=Varela&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: "Varela", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("./bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 450px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 1px 3px 31px 7px rgba(0, 0, 0, 0.82);
+  box-shadow: 1px 3px 25px 7px rgba(0, 0, 0, 0.82);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  color: rgb(0, 0, 0);
+}
+
+.title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.img-container {
+  height: 160px;
+  width: 160px;
+  margin-bottom: 50px;
+}
+
+.cover{
+  animation-name: imgRotate;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.container.play .cover {
+  animation-play-state: running;
+}
+
+@keyframes imgRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cover {
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.time{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.progress-container {
+  width: 80%;
+  background-color: #fff;
+  height: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.progress {
+  background-color: #1C3436;
+  height: inherit;
+  border-radius: inherit;
+  width: 0%;
+}
+
+
+.voice-control{
+  width: 40%;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.navigation {
+  display: flex;
+  gap: 30px;
+}
+
+.btn {
+  border: 0;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  opacity: 0.8;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.btn-big {
+  font-size: 1.5rem;
+}
+
+
+
+
+
+
+/* input,
+output {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+} */
+
+output {
+  background: transparent;
+  padding: 5px 16px;
+  border-radius: 3px;
+  color: #fff;
+}
+/* 
+input[type="number"] {
+  width: 40px;
+  padding: 4px 5px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+} */
+
+/* input[type="range"]:focus,
+input[type="number"]:focus {
+  box-shadow: 0 0 3px 1px #4b81dd;
+  outline: none;
+} */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 200px;
+  height: 6px;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  background-image: linear-gradient(#1C3436, #1C3436);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Input Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #1C3436;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+}
+
+/* input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #ff4500;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+} */
+
+/* input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #ef3434;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+} */
+
+/* input[type="range"]::-webkit-slider-thumb:hover {
+  background: #a57d7d;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  background: #ff0200;
+}
+
+input[type="range"]::-ms-thumb:hover {
+  background: #ff0200;
+}
+
+/* Input Track */
+/* input[type=range]::-webkit-slider-runnable-track  {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+input[type=range]::-moz-range-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+input[type="range"]::-ms-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+} */
