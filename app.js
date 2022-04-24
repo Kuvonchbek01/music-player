@@ -151,3 +151,24 @@ rangeInputs.forEach(input => {
   input.addEventListener('input', handleInputChange)
 })
 
+
+//loading
+const loader = document.querySelector('.percent')
+
+load = 0
+const int = setInterval(() => {
+    load++
+    loader.textContent = `${load}%`
+    loader.style.opacity = `${
+        (100 - load)
+    }%`
+
+    document.body.style.backdropFilter = `blur(${10 - (10 / 100 ) * load}px)`
+    container.style.filter = `blur(${10 - (10 / 100 ) * load}px)`
+
+
+    if(load >= 100){
+        clearInterval(int)
+    }
+},25)
+
